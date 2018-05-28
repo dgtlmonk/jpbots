@@ -40,7 +40,7 @@ You will see the build errors and lint warnings in the console.
 ### Directory layout
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
+    ├── public                  # Runtime folder
     ├── src                     # Source files
     ├── test                    # Automated tests
     ├── common                  # Generic utilities folder
