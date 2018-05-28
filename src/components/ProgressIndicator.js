@@ -42,7 +42,7 @@ class ProgressIndicator extends React.PureComponent {
 
       progress++;
       this.setState({ progress });
-    }, 10);
+    }, 80);
   }
 
   componentWillUnmount = () => {

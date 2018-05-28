@@ -16,7 +16,7 @@ const ShipmentSummary = ({ shipmentData }) => {
       <Content>
         <Row>
           <Col>
-          <h2>Shipment Summary</h2>
+            <h2 style={{ color: '#000'}}>Shipment Summary</h2>
           </Col>
           <Col>
             <Table columns={columns} dataSource={shipmentData} />

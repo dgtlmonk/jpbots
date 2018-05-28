@@ -1,34 +1,90 @@
-# Tribe Robots
+# JP Bots QA and Shipping App (Coding challenge)
 [![generator-create-redux-app](https://img.shields.io/badge/built%20with-generator--create--redux--app-brightgreen.svg)](https://github.com/jonidelv/generator-create-redux-app)
 
-This project was generated with [Create Redux App](https://github.com/jonidelv/generator-create-redux-app). Refer to `docs/create-redux-app` to find more information on how to perform common tasks.
+#### Description
 
-Once the installation is done, you can run some commands inside the project folder:
+The owner of a factory producing toy robots requires software to manage the stages of the production line. Please build a web app to manage the QA and shipping process.
+
+Assume that there is already a inventory management software for registering the new robots for QA.
+
+To simplify things you can mimic inventory behaviour by generating the robots with different configurations in the backend programmatically. When the webapp ask for robots for QA you can return that collection.
+
+------
+
+Requirements
+`Node v.8.9.0 +`
+
+
+### To clone and install dependencies
+
+### `git clone https://github.com/dgtlmonk/jpbots jpbots && $_ && npm install`
+
+Once the cloning is done, run the npm script inside the project folder (you should be inside already :-) ):
+
+
 
 ### `npm start` or `yarn start`
 
-Runs the app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This command should run and open the browser<br>
+[http://localhost:3000](http://localhost:3000)
 
 The page will reload if you make edits.<br>
 You will see the build errors and lint warnings in the console.
 
 ### `npm test` or `yarn test`
 
-Runs the test watcher in an interactive mode.<br>
-By default, runs tests related to files changes since the last commit.
+------
+> Folders and Files
 
-[Read more about testing.](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
 
-### `npm run build` or `yarn build`
+### A typical top-level directory layout
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── src                     # Source files
+    ├── test                    # Automated tests
+    ├── common                  # Generic utilities folder
+    ├── components              # Global / Reusable react components folder
+    ├── containers              # React containers folder
+    ├── data                    # Mock data folder
+    ├── modules                 # Main module folder (sagas, reducers, actions, constants, exclusive components)
+    ├── reducers                # Main Reducer folder
+    ├── sagas                   # Main Saga folder
+    ├── services                # API folder or anything that connects to back-end or 3rd party services
+    ├── store                   # Redux CeateStore folder
+    ├── styles                  # Global styles folder and antd stlyes overrides
+    └── README.md               # This
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-### `npm run generate`
+> create-react-app overrides
+#### `config-overrides.js`
 
-Allows you to auto-generate boilerplate code for common parts of your
-application, specifically `component`s and `container`s.
+------
+
+### Tests
+
+Not implemented yet
+
+### Screenshots
+![picture](https://cdn.pbrd.co/images/HncZwOa.png)
+![picture](https://cdn.pbrd.co/images/Hnd1Vt3.jpg)
+
+#### Note that the Notification message here is just a mockup message.
+
+![picture](https://cdn.pbrd.co/images/Hnd2nRl.jpg)
+
+> Shipping process
+
+![picture](https://cdn.pbrd.co/images/HndcZ6V.jpg)
+![picture](https://cdn.pbrd.co/images/HnddsWh.jpg)
+![picture](https://cdn.pbrd.co/images/HnddIOZ.jpg)
+![picture](https://cdn.pbrd.co/images/HndeoKR.jpg)
+![picture](https://cdn.pbrd.co/images/HndeyGN.jpg)
+
+> Error if shipment has no item for shipping
+
+![picture](https://cdn.pbrd.co/images/HndeHeT.jpg)
+
+> Shipment Summary screen
+
+![picture](https://cdn.pbrd.co/images/HndfaRT.jpg)
