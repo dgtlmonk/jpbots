@@ -69,7 +69,7 @@ Not implemented yet
 ![picture](https://cdn.pbrd.co/images/HncZwOa.png)
 ![picture](https://cdn.pbrd.co/images/Hnd1Vt3.jpg)
 
-#### Note that the Notification message here is just a mockup message.
+#### Notification message after QA Process
 
 ![picture](https://cdn.pbrd.co/images/Hnd2nRl.jpg)
 
