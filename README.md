@@ -62,8 +62,10 @@ You will see the build errors and lint warnings in the console.
 ------
 
 ### Tests
-
 Not implemented yet
+
+### Known Bug
+When removing item from `Shipment` tab, the item goes back to original list (factory second or QA Passed) as checked item. Please uncheck the item first before adding it again - `Add To Shipment` button won't be visible anyways.
 
 ### Screenshots
 ![picture](https://cdn.pbrd.co/images/HncZwOa.png)
