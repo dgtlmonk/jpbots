@@ -42,17 +42,18 @@ You will see the build errors and lint warnings in the console.
     .
     ├── public                  # Runtime folder
     ├── src                     # Source files
-    ├── test                    # Automated tests
-    ├── common                  # Generic utilities folder
-    ├── components              # Global / Reusable react components folder
-    ├── containers              # React containers folder
-    ├── data                    # Mock data folder
-    ├── modules                 # Main module folder (sagas, reducers, actions, constants, exclusive components)
-    ├── reducers                # Main Reducer folder
-    ├── sagas                   # Main Saga folder
-    ├── services                # API folder or anything that connects to back-end or 3rd party services
-    ├── store                   # Redux CeateStore folder
-    ├── styles                  # Global styles folder and antd stlyes overrides
+    ├───── common                  # Generic utilities folder
+    ├───── components              # Global / Reusable react components folder
+    ├───── containers              # React containers folder
+    ├───── data                    # Mock data folder
+    ├───── modules                 # Main module folder (sagas, reducers, actions, constants, exclusive components)
+    ├───── reducers                # Main Reducer folder
+    ├───── routes                  # Routes configuration / setup
+    ├───── sagas                   # Main Saga folder
+    ├───── services                # API folder or anything that connects to back-end or 3rd party services
+    ├───── store                   # Redux CeateStore folder
+    ├───── styles                  # Global styles folder and antd stlyes overrides
+    ├───── tests                   # Automated tests (not implemented yet)
     └── README.md               # This
 
 
