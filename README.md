@@ -17,13 +17,13 @@ Requirements
 
 ### To clone and install dependencies
 
-### `git clone https://github.com/dgtlmonk/jpbots jpbots && $_ && npm install`
+#### `git clone https://github.com/dgtlmonk/jpbots jpbots && $_ && npm install`
 
 Once the cloning is done, run the npm script inside the project folder (you should be inside already :-) ):
 
 
 
-### `npm start` or `yarn start`
+#### `npm start` or `yarn start`
 
 This command should run and open the browser<br>
 [http://localhost:3000](http://localhost:3000)
@@ -31,13 +31,13 @@ This command should run and open the browser<br>
 The page will reload if you make edits.<br>
 You will see the build errors and lint warnings in the console.
 
-### `npm test` or `yarn test`
+#### `npm test` or `yarn test`
 
 ------
 > Folders and Files
 
 
-### A typical top-level directory layout
+### Directory layout
 
     .
     ├── build                   # Compiled files (alternatively `dist`)
@@ -56,8 +56,8 @@ You will see the build errors and lint warnings in the console.
     └── README.md               # This
 
 
-> create-react-app overrides
-#### `config-overrides.js`
+#### create-react-app overrides file
+`config-overrides.js`
 
 ------
 
