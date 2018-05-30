@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { getIndexFromArray } from 'common/utils'
-import { actions } from 'modules/qa/actions'
+import { actions } from 'modules/shipment/actions'
 import { ShipmentColumns as columns } from 'common/table.config'
 import { Layout, Table, Icon, Tabs, Button, Row, Col } from 'antd'
 import { Wrapper } from 'styles/global-styles'
@@ -226,9 +226,9 @@ ShipmentStart.propTypes = {
 };
 
 const mapStateToProps = state => {
-  const { stepStatus } = state.qa.toJS()
-  const factorySecondDataSource = state.qa.toJS().factorySecond
-  const passedQADataSource = state.qa.toJS().passedQA
+  const { stepStatus } = state.app.toJS()
+  const factorySecondDataSource = state.shipment.toJS().factorySecond
+  const passedQADataSource = state.shipment.toJS().passedQA
 
   return {
     stepStatus,

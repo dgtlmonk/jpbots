@@ -4,7 +4,8 @@ import BotAppContainers from 'containers'
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 import { Button, Layout, Steps, Icon, message, Row, Col } from 'antd'
-import { actions } from 'modules/qa/actions'
+import { actions as qa} from 'modules/qa/actions'
+import { actions as app} from 'modules/app/actions'
 
 const { RQAStart, ShipmentStart, ShipmentSummary } = BotAppContainers;
 const { Content } = Layout;
@@ -109,9 +110,10 @@ RQAMain.propTypes = {
 
 /* eslint "one-var": 0 */
 const mapStateToProps = state => {
-  const { stepStatus, qaPassed } = state.qa.toJS(),
+  const { qaPassed } = state.qa.toJS(),
+    { stepStatus } = state.app.toJS(),
     datasource = state.qa.toJS().inventory.data,
-    shipmentData = state.qa.toJS().shipmentData
+    shipmentData = state.shipment.toJS().shipmentData
 
   return {
     stepStatus,
@@ -122,8 +124,8 @@ const mapStateToProps = state => {
 }
 
 function mapDispatchToProps(dispatch) {
-const onAppStart = actions.startApp;
-const onNextStep = actions.moveStep;
+const onAppStart = qa.getBotList;
+const onNextStep = app.moveStep;
 
   return bindActionCreators({
     onAppStart,
