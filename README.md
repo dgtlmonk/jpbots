@@ -1,7 +1,15 @@
 # JP Bots QA and Shipping App (Coding challenge)
 [![generator-create-redux-app](https://img.shields.io/badge/built%20with-generator--create--redux--app-brightgreen.svg)](https://github.com/jonidelv/generator-create-redux-app)
 
-!!! Update: New Release https://github.com/dgtlmonk/jpbots/releases/tag/v1.1.2 (organized `containers` accordingly) 
+
+> New Tag Release 
+
+```
+https://github.com/dgtlmonk/jpbots/releases/tag/v1.1.2 (organized `modules` and `containers` accordingly) 
+
+$ git checkout tags/v1.1.2
+```
+
 
 #### Description
 
