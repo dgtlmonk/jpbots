@@ -1,6 +1,8 @@
 # JP Bots QA and Shipping App (Coding challenge)
 [![generator-create-redux-app](https://img.shields.io/badge/built%20with-generator--create--redux--app-brightgreen.svg)](https://github.com/jonidelv/generator-create-redux-app)
 
+!!! Update: New Release https://github.com/dgtlmonk/jpbots/releases/tag/v1.1.2 (organized `containers` accordingly) 
+
 #### Description
 
 The owner of a factory producing toy robots requires software to manage the stages of the production line. Please build a web app to manage the QA and shipping process.
