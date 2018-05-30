@@ -20,7 +20,6 @@ export const FILTER_KEY = {
   LOOSE_SCREW_OR_SCRATCH_PAINT: 'Has loose screws or Scratched paint '
 }
 
-
 export const RECYCLE_FILTERS = [
   FILTER_KEY.HAS_ROTOR_AND_BLUE,
   FILTER_KEY.VALID_ROTOR_COUNT,

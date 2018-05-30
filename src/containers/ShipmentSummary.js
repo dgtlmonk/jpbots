@@ -33,7 +33,7 @@ ShipmentSummary.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const shipmentData = state.qa.toJS().shipmentData
+  const shipmentData = state.shipment.toJS().shipmentData
 
   return {
     shipmentData
