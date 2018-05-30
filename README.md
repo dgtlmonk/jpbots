@@ -17,13 +17,13 @@ Requirements
 
 ### To clone and install dependencies
 
-### `git clone https://github.com/dgtlmonk/jpbots jpbots && $_ && npm install`
+#### `git clone https://github.com/dgtlmonk/jpbots jpbots && $_ && npm install`
 
 Once the cloning is done, run the npm script inside the project folder (you should be inside already :-) ):
 
 
 
-### `npm start` or `yarn start`
+#### `npm start` or `yarn start`
 
 This command should run and open the browser<br>
 [http://localhost:3000](http://localhost:3000)
@@ -31,45 +31,48 @@ This command should run and open the browser<br>
 The page will reload if you make edits.<br>
 You will see the build errors and lint warnings in the console.
 
-### `npm test` or `yarn test`
+#### `npm test` or `yarn test`
 
 ------
 > Folders and Files
 
 
-### A typical top-level directory layout
+### Directory layout
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
+    ├── public                  # Runtime folder
     ├── src                     # Source files
-    ├── test                    # Automated tests
-    ├── common                  # Generic utilities folder
-    ├── components              # Global / Reusable react components folder
-    ├── containers              # React containers folder
-    ├── data                    # Mock data folder
-    ├── modules                 # Main module folder (sagas, reducers, actions, constants, exclusive components)
-    ├── reducers                # Main Reducer folder
-    ├── sagas                   # Main Saga folder
-    ├── services                # API folder or anything that connects to back-end or 3rd party services
-    ├── store                   # Redux CeateStore folder
-    ├── styles                  # Global styles folder and antd stlyes overrides
+    ├───── common                  # Generic utilities folder
+    ├───── components              # Global / Reusable react components folder
+    ├───── containers              # React containers folder
+    ├───── data                    # Mock data folder
+    ├───── modules                 # Main module folder (sagas, reducers, actions, constants, exclusive components)
+    ├───── reducers                # Main Reducer folder
+    ├───── routes                  # Routes configuration / setup
+    ├───── sagas                   # Main Saga folder
+    ├───── services                # API folder or anything that connects to back-end or 3rd party services
+    ├───── store                   # Redux CeateStore folder
+    ├───── styles                  # Global styles folder and antd stlyes overrides
+    ├───── tests                   # Automated tests (not implemented yet)
     └── README.md               # This
 
 
-> create-react-app overrides
-#### `config-overrides.js`
+#### create-react-app overrides file
+`config-overrides.js`
 
 ------
 
 ### Tests
-
 Not implemented yet
+
+### Known Bug
+When removing item from `Shipment` tab, the item goes back to original list (factory second or QA Passed) as checked item. Please uncheck the item first before adding it again - `Add To Shipment` button won't be visible anyways.
 
 ### Screenshots
 ![picture](https://cdn.pbrd.co/images/HncZwOa.png)
 ![picture](https://cdn.pbrd.co/images/Hnd1Vt3.jpg)
 
-#### Note that the Notification message here is just a mockup message.
+#### Notification message after QA Process
 
 ![picture](https://cdn.pbrd.co/images/Hnd2nRl.jpg)
 
