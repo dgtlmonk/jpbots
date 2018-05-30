@@ -1,7 +1,5 @@
 import React from 'react'
-import RQAMain from 'containers/RQAMain'
-import Login from 'containers/Login'
-
+import { Login, RQAMain  }  from 'containers'
 import { Layout, Row, Col } from 'antd'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Wrapper } from 'styles/global-styles'
