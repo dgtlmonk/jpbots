@@ -4,9 +4,10 @@
 
 > New Tag Release 
 
-```
-https://github.com/dgtlmonk/jpbots/releases/tag/v1.1.2 (organized `modules` and `containers` accordingly) 
+#### v1.1.2
+organized `modules` and `containers` accordingly
 
+```
 $ git checkout tags/v1.1.2
 ```
 
