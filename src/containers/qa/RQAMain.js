@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import BotAppContainers from 'containers'
+import { RQAStart, ShipmentStart, ShipmentSummary } from 'containers'
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 import { Button, Layout, Steps, Icon, message, Row, Col } from 'antd'
 import { actions as qa} from 'modules/qa/actions'
 import { actions as app} from 'modules/app/actions'
 
-const { RQAStart, ShipmentStart, ShipmentSummary } = BotAppContainers;
 const { Content } = Layout;
 const Step = Steps.Step;
 
