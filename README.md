@@ -1,17 +1,6 @@
 # JP Bots QA and Shipping App (Coding challenge)
 [![generator-create-redux-app](https://img.shields.io/badge/built%20with-generator--create--redux--app-brightgreen.svg)](https://github.com/jonidelv/generator-create-redux-app)
 
-
-> New Tag Release 
-
-#### v1.1.2
-organized `modules` and `containers` accordingly
-
-```
-$ git checkout tags/v1.1.2
-```
-
-
 #### Description
 
 The owner of a factory producing toy robots requires software to manage the stages of the production line. Please build a web app to manage the QA and shipping process.
@@ -42,7 +31,10 @@ This command should run and open the browser<br>
 The page will reload if you make edits.<br>
 You will see the build errors and lint warnings in the console.
 
-#### `npm test` or `yarn test`
+#### Enzyme + Jest Test
+`npm test` or `yarn test`
+
+Note you may need to remove yarn.lock / package.json.lock and node_modules if test is crashing, then `npm install or yarn add`
 
 ------
 > Folders and Files
