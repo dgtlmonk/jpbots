@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Components from 'components'
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
-import { actions } from "modules/qa/actions"
+import { actions as qa } from "modules/qa/actions"
+import { actions as app } from "modules/app/actions"
 import QAComponents from 'modules/qa/components'
 import { Layout, Button, Icon, Row, Col, notification, Popconfirm } from 'antd'
 import { Wrapper } from 'styles/global-styles'
@@ -13,7 +14,7 @@ const { ProgressIndicator} = Components;
 const { Content } = Layout
 const confirmText = "This will extinguish fire and recycle robots. Are you sure to Proceed?"
 
-class RQAStart extends React.PureComponent {
+class QAProcessMain extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -85,7 +86,7 @@ class RQAStart extends React.PureComponent {
   }
 }
 
-RQAStart.defaultProps = {
+QAProcessMain.defaultProps = {
   datasource: [],
   actorySecond: [],
   recycleRobots: [],
@@ -95,7 +96,7 @@ RQAStart.defaultProps = {
 }
 
 /* eslint "react/no-unused-prop-types":0 */
-RQAStart.propTypes = {
+QAProcessMain.propTypes = {
   datasource: PropTypes.array.isRequired,
   factorySecond: PropTypes.array.isRequired,
   recycleRobots: PropTypes.array.isRequired,
@@ -105,9 +106,11 @@ RQAStart.propTypes = {
   qaPassed: PropTypes.bool.isRequired
 };
 
+/* eslint "one-var" : 0 */
 const mapStateToProps = state => {
-  const { qaPassed, recycleRobots, factorySecond, passedQA } = state.qa.toJS()
-  const datasource = state.qa.toJS().inventory.data
+  const { recycleRobots, factorySecond, passedQA } = state.shipment.toJS(),
+    { qaPassed }  = state.qa.toJS(),
+    datasource = state.qa.toJS().inventory.data
 
   return {
     qaPassed,
@@ -119,8 +122,8 @@ const mapStateToProps = state => {
 }
 
 function mapDispatchToProps(dispatch) {
-  const qaTaskFulfilled = actions.moveStepFulfilled;
-  const extinguishTask = actions.extinguish;
+  const qaTaskFulfilled = app.moveStepFulfilled;
+  const extinguishTask = qa.extinguish;
 
   return bindActionCreators({
     qaTaskFulfilled,
@@ -128,5 +131,5 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RQAStart)
+export default connect(mapStateToProps, mapDispatchToProps)(QAProcessMain)
 

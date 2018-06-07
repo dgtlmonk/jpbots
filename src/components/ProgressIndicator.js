@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { Progress } from 'antd'
 
-class ProgressIndicator extends React.PureComponent {
+class ProgressIndicator extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -42,7 +42,7 @@ class ProgressIndicator extends React.PureComponent {
 
       progress++;
       this.setState({ progress });
-    }, 80);
+    }, 40);
   }
 
   componentWillUnmount = () => {

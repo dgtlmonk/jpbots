@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import BotAppContainers from 'containers'
+import { QAProcessMain, ShipmentMain, ShipmentSummary } from 'containers'
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 import { Button, Layout, Steps, Icon, message, Row, Col } from 'antd'
-import { actions } from 'modules/qa/actions'
+import { actions as qa} from 'modules/qa/actions'
+import { actions as app} from 'modules/app/actions'
 
-const { RQAStart, ShipmentStart, ShipmentSummary } = BotAppContainers;
 const { Content } = Layout;
 const Step = Steps.Step;
 
-class RQAMain extends React.Component {
+class QAProcessWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,10 +43,10 @@ class RQAMain extends React.Component {
     const opts = {};
     const steps = [{
       title: 'QA',
-      content: <RQAStart datasource={this.props.datasource}/>,
+      content: <QAProcessMain datasource={this.props.datasource}/>,
     }, {
       title: 'Shipment',
-      content: <ShipmentStart datasource={this.props.datasource}/>,
+      content: <ShipmentMain datasource={this.props.datasource}/>,
     }, {
       title: 'Shipment Summary',
       content: <ShipmentSummary/>,
@@ -89,13 +89,13 @@ class RQAMain extends React.Component {
   }
 }
 
-RQAMain.defaultProps ={
+QAProcessWrapper.defaultProps ={
   stepStatus: {},
   datasource: [],
   qaPassed: false
 }
 
-RQAMain.propTypes = {
+QAProcessWrapper.propTypes = {
   onAppStart: PropTypes.func.isRequired,
   onNextStep: PropTypes.func.isRequired,
   shipmentData: PropTypes.array.isRequired,
@@ -109,9 +109,10 @@ RQAMain.propTypes = {
 
 /* eslint "one-var": 0 */
 const mapStateToProps = state => {
-  const { stepStatus, qaPassed } = state.qa.toJS(),
+  const { qaPassed } = state.qa.toJS(),
+    { stepStatus } = state.app.toJS(),
     datasource = state.qa.toJS().inventory.data,
-    shipmentData = state.qa.toJS().shipmentData
+    shipmentData = state.shipment.toJS().shipmentData
 
   return {
     stepStatus,
@@ -122,8 +123,8 @@ const mapStateToProps = state => {
 }
 
 function mapDispatchToProps(dispatch) {
-const onAppStart = actions.startApp;
-const onNextStep = actions.moveStep;
+const onAppStart = qa.getBotList;
+const onNextStep = app.moveStep;
 
   return bindActionCreators({
     onAppStart,
@@ -131,5 +132,5 @@ const onNextStep = actions.moveStep;
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RQAMain);
+export default connect(mapStateToProps, mapDispatchToProps)(QAProcessWrapper);
 

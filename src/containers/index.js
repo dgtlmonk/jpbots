@@ -1,13 +1,5 @@
-import RQAMain from './RQAMain'
-import RQAStart from './RQAStart'
-import ShipmentStart from './ShipmentStart'
-import ShipmentSummary from './ShipmentSummary'
-
-export default {
-  RQAMain,
-  RQAStart,
-  ShipmentStart,
-  ShipmentSummary
-}
-
-
+export { default as QAProcessWrapper } from './qa/QAProcessWrapper'
+export { default as QAProcessMain } from './qa/QAProcessMain'
+export { default as ShipmentMain }  from './shipment/ShipmentMain'
+export { default as ShipmentSummary }  from './shipment/ShipmentSummary'
+export { default as Login }  from './login/Login'

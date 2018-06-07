@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux'
-import qa from '../modules/qa/reducers';
+import app from '../modules/app/reducers'
+import qa from '../modules/qa/reducers'
+import shipment from '../modules/shipment/reducers'
 
 const rootReducer = combineReducers({
-  qa
+  app,
+  qa,
+  shipment
 })
 
 export default rootReducer
