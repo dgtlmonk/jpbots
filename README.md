@@ -34,7 +34,12 @@ You will see the build errors and lint warnings in the console.
 #### Enzyme + Jest Test
 `npm test` or `yarn test`
 
-Note you may need to remove yarn.lock / package.json.lock and node_modules if test is crashing, then `npm install or yarn add`
+Note you may need to remove 
+- yarn.lock 
+- package.json.lock 
+- node_modules 
+
+if test is crashing, then `npm install or yarn add`
 
 ------
 > Folders and Files
