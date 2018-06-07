@@ -56,11 +56,11 @@ if test is crashing, then `npm install or yarn add`
     ├───── containers           # React containers folder
     ├───── data                 # Mock data folder
     ├───── modules              # Main module folder (sagas, reducers, actions, constants, exclusive components)
-    ├───── reducers             # Main Reducer folder
+    ├───── reducers             # Main Reducer folder (Combined Reducers)
     ├───── routes               # Routes configuration / setup
     ├───── sagas                # Main Saga folder
     ├───── services             # API folder or anything that connects to back-end or 3rd party services
-    ├───── store                # Redux CeateStore folder
+    ├───── store                # Redux CreateStore folder
     ├───── styles               # Global styles folder and antd stlyes overrides
     └── README.md               # This
 
