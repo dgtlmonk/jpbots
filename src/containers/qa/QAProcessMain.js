@@ -14,7 +14,7 @@ const { ProgressIndicator} = Components;
 const { Content } = Layout
 const confirmText = "This will extinguish fire and recycle robots. Are you sure to Proceed?"
 
-class RQAStart extends React.PureComponent {
+class QAProcessMain extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -86,7 +86,7 @@ class RQAStart extends React.PureComponent {
   }
 }
 
-RQAStart.defaultProps = {
+QAProcessMain.defaultProps = {
   datasource: [],
   actorySecond: [],
   recycleRobots: [],
@@ -96,7 +96,7 @@ RQAStart.defaultProps = {
 }
 
 /* eslint "react/no-unused-prop-types":0 */
-RQAStart.propTypes = {
+QAProcessMain.propTypes = {
   datasource: PropTypes.array.isRequired,
   factorySecond: PropTypes.array.isRequired,
   recycleRobots: PropTypes.array.isRequired,
@@ -131,5 +131,5 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RQAStart)
+export default connect(mapStateToProps, mapDispatchToProps)(QAProcessMain)
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Login, RQAMain  }  from 'containers'
+import { Login, QAProcessWrapper  }  from 'containers'
 import { Layout, Row, Col } from 'antd'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Wrapper } from 'styles/global-styles'
@@ -23,7 +23,7 @@ function Routes() {
         </Header>
         <Layout style={{ padding: '0' }}>
           <Route path="/" exact={true} component={Login} />
-          <Route path="/main" component={RQAMain} />
+          <Route path="/main" component={QAProcessWrapper} />
         </Layout>
       </Wrapper>
     </Router>
