@@ -50,18 +50,18 @@ if test is crashing, then `npm install or yarn add`
     .
     ├── public                  # Runtime folder
     ├── src                     # Source files
-    ├───── common                  # Generic utilities folder
-    ├───── components              # Global / Reusable react components folder
-    ├───── containers              # React containers folder
-    ├───── data                    # Mock data folder
-    ├───── modules                 # Main module folder (sagas, reducers, actions, constants, exclusive components)
-    ├───── reducers                # Main Reducer folder
-    ├───── routes                  # Routes configuration / setup
-    ├───── sagas                   # Main Saga folder
-    ├───── services                # API folder or anything that connects to back-end or 3rd party services
-    ├───── store                   # Redux CeateStore folder
-    ├───── styles                  # Global styles folder and antd stlyes overrides
-    ├───── tests                   # Automated tests (not implemented yet)
+    ├───── common               # Generic utilities folder
+    ├───── components           # Global / Reusable react components folder
+      ├───── __tests__          # enzyme + jest tests
+    ├───── containers           # React containers folder
+    ├───── data                 # Mock data folder
+    ├───── modules              # Main module folder (sagas, reducers, actions, constants, exclusive components)
+    ├───── reducers             # Main Reducer folder
+    ├───── routes               # Routes configuration / setup
+    ├───── sagas                # Main Saga folder
+    ├───── services             # API folder or anything that connects to back-end or 3rd party services
+    ├───── store                # Redux CeateStore folder
+    ├───── styles               # Global styles folder and antd stlyes overrides
     └── README.md               # This
 
 
