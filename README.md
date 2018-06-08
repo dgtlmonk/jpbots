@@ -1,5 +1,8 @@
 # JP Bots QA and Shipping App (Coding challenge)
-[![generator-create-redux-app](https://img.shields.io/badge/built%20with-generator--create--redux--app-brightgreen.svg)](https://github.com/jonidelv/generator-create-redux-app)
+![picture](https://img.shields.io/npm/l/express.svg)
+![picture](https://img.shields.io/david/expressjs/express.svg)
+![picture](https://img.shields.io/david/dev/expressjs/express.svg)
+
 
 #### Description
 
