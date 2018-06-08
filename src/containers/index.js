@@ -1,4 +1,4 @@
-export { default as QAProcessWrapper } from './qa/QAProcessWrapper'
+export { default as AppMain } from './app/AppMain'
 export { default as QAProcessMain } from './qa/QAProcessMain'
 export { default as ShipmentMain }  from './shipment/ShipmentMain'
 export { default as ShipmentSummary }  from './shipment/ShipmentSummary'

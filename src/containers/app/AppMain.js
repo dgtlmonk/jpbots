@@ -10,7 +10,7 @@ import { actions as app} from 'modules/app/actions'
 const { Content } = Layout;
 const Step = Steps.Step;
 
-class QAProcessWrapper extends React.Component {
+class AppMain extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -89,13 +89,13 @@ class QAProcessWrapper extends React.Component {
   }
 }
 
-QAProcessWrapper.defaultProps ={
+AppMain.defaultProps ={
   stepStatus: {},
   datasource: [],
   qaPassed: false
 }
 
-QAProcessWrapper.propTypes = {
+AppMain.propTypes = {
   onAppStart: PropTypes.func.isRequired,
   onNextStep: PropTypes.func.isRequired,
   shipmentData: PropTypes.array.isRequired,
@@ -132,5 +132,5 @@ const onNextStep = app.moveStep;
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(QAProcessWrapper);
+export default connect(mapStateToProps, mapDispatchToProps)(AppMain);
 
