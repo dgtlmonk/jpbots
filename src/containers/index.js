@@ -1,5 +1,5 @@
-export { default as RQAMain } from './qa/RQAMain'
-export { default as RQAStart } from './qa/RQAStart'
-export { default as ShipmentStart }  from './shipment/ShipmentStart'
+export { default as AppMain } from './app/AppMain'
+export { default as QAProcessMain } from './qa/QAProcessMain'
+export { default as ShipmentMain }  from './shipment/ShipmentMain'
 export { default as ShipmentSummary }  from './shipment/ShipmentSummary'
 export { default as Login }  from './login/Login'

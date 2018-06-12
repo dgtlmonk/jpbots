@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import { RQAStart, ShipmentStart, ShipmentSummary } from 'containers'
+import { QAProcessMain, ShipmentMain, ShipmentSummary } from 'containers'
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 import { Button, Layout, Steps, Icon, message, Row, Col } from 'antd'
@@ -10,7 +10,7 @@ import { actions as app} from 'modules/app/actions'
 const { Content } = Layout;
 const Step = Steps.Step;
 
-class RQAMain extends React.Component {
+class AppMain extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,10 +43,10 @@ class RQAMain extends React.Component {
     const opts = {};
     const steps = [{
       title: 'QA',
-      content: <RQAStart datasource={this.props.datasource}/>,
+      content: <QAProcessMain datasource={this.props.datasource}/>,
     }, {
       title: 'Shipment',
-      content: <ShipmentStart datasource={this.props.datasource}/>,
+      content: <ShipmentMain datasource={this.props.datasource}/>,
     }, {
       title: 'Shipment Summary',
       content: <ShipmentSummary/>,
@@ -89,13 +89,13 @@ class RQAMain extends React.Component {
   }
 }
 
-RQAMain.defaultProps ={
+AppMain.defaultProps ={
   stepStatus: {},
   datasource: [],
   qaPassed: false
 }
 
-RQAMain.propTypes = {
+AppMain.propTypes = {
   onAppStart: PropTypes.func.isRequired,
   onNextStep: PropTypes.func.isRequired,
   shipmentData: PropTypes.array.isRequired,
@@ -132,5 +132,5 @@ const onNextStep = app.moveStep;
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RQAMain);
+export default connect(mapStateToProps, mapDispatchToProps)(AppMain);
 
