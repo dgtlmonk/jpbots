@@ -166,8 +166,8 @@ _handleAddToShipment = (e) => {
   const { tag } = e.currentTarget.dataset
   const keys = []
 
-  const cache = this._getDataSource[SOURCE[tag]]().cache,
-    datasource = this._getDataSource[SOURCE[tag]]().datasource;
+  const cache = this._getDataSource(SOURCE[tag]).cache,
+    datasource = this._getDataSource(SOURCE[tag]).datasource;
 
   datasource.forEach(data => {
     shipmentDataLookup[data.key] = { source: SOURCE[tag], data };
@@ -180,7 +180,7 @@ _handleAddToShipment = (e) => {
     cache.splice(idx, 1)
   });
 
-  this._getDataSource[SOURCE[tag]]().updateState(cache);
+  this._getDataSource(SOURCE[tag]).updateState(cache);
 }
 
 render() {
@@ -194,7 +194,7 @@ render() {
                   <Button data-tag={SOURCE.FACTORY_SECOND} type="primary" onClick={this._handleAddToShipment}>Add to shipment</Button>
                 </Col>
                 <Col>
-                  <Table rowSelection={this._factorySecondOnRowSelection} columns={columns} dataSource={this.state.factorySecondDataSourceCache} />
+                  <Table rowSelection={this._factorySecondOnRowSelection()} columns={columns} dataSource={this.state.factorySecondDataSourceCache} />
                 </Col>
               </Row>
             </TabPane>
@@ -204,7 +204,7 @@ render() {
                   <Button data-tag={SOURCE.QA_PASSED} type="primary" onClick={this._handleAddToShipment}>Add to shipment</Button>
                 </Col>
                 <Col>
-                  <Table rowSelection={this._passedQARowSelection} columns={columns} dataSource={this.state.passedQADataSourceCache} />
+                  <Table rowSelection={this._passedQARowSelection()} columns={columns} dataSource={this.state.passedQADataSourceCache} />
                 </Col>
               </Row>
             </TabPane>
@@ -214,7 +214,7 @@ render() {
                   <Button type="primary" onClick={this._handleRemoveFromShipment}>Remove from shipment</Button>
                 </Col>
                 <Col>
-                  <Table rowSelection={this._shipmentDataRowSelection} columns={columns} dataSource={this.state.shipmentData} />
+                  <Table rowSelection={this._shipmentDataRowSelection()} columns={columns} dataSource={this.state.shipmentData} />
                 </Col>
               </Row>
             </TabPane>

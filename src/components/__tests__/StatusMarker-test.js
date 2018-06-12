@@ -4,43 +4,41 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import StatusMarker from '../StatusMarker'
 
-describe('<StatusMarker />', () => {
-  it('should render properly', () =>{
+describe('<StatusMarker /> Component ', () => {
+  describe('when rendered', () => {
+    it('then it should run without error', () =>{
       expect(shallow(<StatusMarker />).length).toEqual(1)
+    })
   })
 
-  describe('should have ', () => {
+  describe('when rendered without props', () => {
     let wrapper;
 
     beforeEach(() => {
       wrapper = shallow(<StatusMarker />)
     })
 
-    it('default status of `none`', () =>{
+    it('then it should have default status text of `none`', () =>{
       expect(wrapper.instance().props.status).toEqual('none')
     })
 
-    it('default color of `#fff`', () =>{
+    it('and it should have default marker color of `#fff`', () =>{
       expect(wrapper.instance().props.color).toEqual('#fff')
     })
 
   })
 
-  describe('should render ', () => {
-    it('`active` when `status` props equals `active`', () => {
+  describe('when rendered with custom props', () => {
+    it('then it should display custom status text', () => {
       const wrapper = shallow(<StatusMarker status="active" />)
       expect(wrapper.text()).toContain('active')
     });
 
-    it('custom color based on `color` props', () => {
+    it('and it should have a custom marker color', () => {
       const wrapper = shallow(<StatusMarker color="#eee" />)
       expect(wrapper.find('#badge')).toHaveStyle('color', '#eee');
     });
 
-    it('custom color based on `color` props', () => {
-      const wrapper = shallow(<StatusMarker color="#eee" />)
-      expect(wrapper.find('#badge')).toHaveStyle('color', '#eee');
-    });
   })
 
 })
